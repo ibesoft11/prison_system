@@ -1,0 +1,23 @@
+﻿<Window x:Class="prison_system.cam" Name="cammer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Wpf="clr-namespace:Dynamsoft.DotNet.TWAIN.Wpf;assembly=DynamicDotNetTWAIN.Wpf"
+        Title="Image Preview" Height="351.88" Width="307.895" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF576289" Offset="0.061"/>
+                <GradientStop Color="#FF0B2451" Offset="1"/>
+                <GradientStop Color="#FF0B2C58" Offset="0.548"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Image Name="image1" HorizontalAlignment="Left" Height="218" Margin="15,10,0,0" VerticalAlignment="Top" Width="268" Stretch="Fill"/>
+        <Wpf:DynamicDotNetTwain  Visibility="Hidden" Name="dynamicDotNetTwain1" HorizontalAlignment="Left" Margin="15,8,0,0" VerticalAlignment="Top" Width="76" Height="19" />
+        <Label Content="Video Source" HorizontalAlignment="Left" Margin="11,241,0,0" VerticalAlignment="Top" Foreground="#FFE8D4D4"/>
+        <ComboBox Name="cb" SelectionChanged="cb_SelectionChanged" HorizontalAlignment="Left" Margin="116,245,0,0" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="btn_open" Click="btn_open_Click" Content="Open" HorizontalAlignment="Left" Height="29" Margin="15,282,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="btn_capturee" Click="btn_capturee_Click" Content="Capture" HorizontalAlignment="Left" Height="29" Margin="120,282,0,0" VerticalAlignment="Top" Width="72"/>
+        <Button x:Name="btn_close" Click="btn_close_Click" Content="Close" HorizontalAlignment="Left" Height="29" Margin="218,282,0,0" VerticalAlignment="Top" Width="72"/>
+
+    </Grid>
+</Window>

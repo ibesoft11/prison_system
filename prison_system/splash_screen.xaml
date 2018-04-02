@@ -1,0 +1,36 @@
+﻿<Window x:Class="prison_system.splash_screen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="P--M--S" Height="441.706" Width="351.591" WindowStartupLocation="CenterScreen"
+         WindowStyle="None" ResizeMode="NoResize" Closing="Window_Closing">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FF576289" Offset="0.996"/>
+                <GradientStop Color="#FF0B2451"/>
+                <GradientStop Color="#FF0B2C58" Offset="0.931"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image x:Name="spl_ico" MouseLeftButtonUp="spl_ico_MouseLeftButtonUp" HorizontalAlignment="Left" Height="308" Margin="57,28,0,0" VerticalAlignment="Top" Width="251" Source="e-police logo reflection.png" Cursor="Hand"/>
+        <Label Content="PRISON MANAGEMENT SYSTEM" Foreground="DarkGoldenrod"  FontSize="18" HorizontalAlignment="Left" Margin="41,18,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="minim" MouseLeftButtonUp="minim_MouseLeftButtonUp" Content="-" Cursor="Hand" Foreground="WhiteSmoke" FontSize="20" HorizontalAlignment="Left" Margin="309,-9,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label x:Name="clos"  MouseLeftButtonUp="clos_MouseLeftButtonUp" Content="x" Cursor="Hand" Foreground="WhiteSmoke" FontSize="12" HorizontalAlignment="Left" Margin="332,-3,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="Developed by Ibesoft" Foreground="Khaki" HorizontalAlignment="Left" Margin="227,415,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblct" Content="00:00:00" Foreground="Khaki" HorizontalAlignment="Left" Margin="0,414,0,0" VerticalAlignment="Top"/>
+        <RichTextBox ScrollViewer.VerticalScrollBarVisibility="Auto" IsDocumentEnabled="True" x:Name="txt_status" HorizontalAlignment="Left" Height="121" Margin="23,260,0,0" VerticalAlignment="Top" Width="306" Foreground="#FF60B624">
+            <RichTextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF05163A" Offset="1"/>
+                    <GradientStop Color="#FF13306C"/>
+                </LinearGradientBrush>
+            </RichTextBox.Background>
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Connecting to Database Server . . . . ."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label x:Name="lbl_progress" Content="00%" FontSize="18" Foreground="Gold" HorizontalAlignment="Left" Margin="156,219,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

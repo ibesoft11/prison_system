@@ -1,0 +1,36 @@
+﻿<Window x:Class="prison_system.bio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Wpf="clr-namespace:Dynamsoft.DotNet.TWAIN.Wpf;assembly=DynamicDotNetTWAIN.Wpf"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Capture Biometric Data" Height="351" Width="307.895" WindowStartupLocation="CenterScreen"> 
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF576289" Offset="0.061"/>
+                <GradientStop Color="#FF0B2451" Offset="1"/>
+                <GradientStop Color="#FF0B2C58" Offset="0.548"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Image Name="image1" HorizontalAlignment="Left" Height="218" Margin="18,10,0,0" VerticalAlignment="Top" Width="201" Stretch="Fill"/>
+        <Wpf:DynamicDotNetTwain  Visibility="Hidden" Name="dynamicDotNetTwain1" HorizontalAlignment="Left" Margin="15,8,0,0" VerticalAlignment="Top" Width="76" Height="19" />
+        <Label Content="Finger Index" HorizontalAlignment="Left" Margin="11,241,0,0" VerticalAlignment="Top" Foreground="#FFE8D4D4"/>
+        
+        <ComboBox Name="cb" HorizontalAlignment="Left" Margin="116,245,0,0" VerticalAlignment="Top" Width="167">
+            <ComboBoxItem>Right Thumb</ComboBoxItem>
+            <ComboBoxItem>Right Index</ComboBoxItem>
+            <ComboBoxItem>Right Middle</ComboBoxItem>
+           <ComboBoxItem>Right Ring</ComboBoxItem>
+            <ComboBoxItem>Right Pinkie</ComboBoxItem>
+            <ComboBoxItem>Left Thumb</ComboBoxItem>
+            <ComboBoxItem>Left Index</ComboBoxItem>
+            <ComboBoxItem>Left Middle</ComboBoxItem>
+            <ComboBoxItem>Left Ring</ComboBoxItem>
+            <ComboBoxItem>Left Pinkie</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="btn_start" Click="btn_start_Click" Content="Start" HorizontalAlignment="Left" Height="29" Margin="15,282,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="btn_verify" Click="btn_verify_Click" Content="Verify" HorizontalAlignment="Left" Height="29" Margin="120,282,0,0" VerticalAlignment="Top" Width="72"/>
+        <Button x:Name="btn_save" Click="btn_save_Click" Content="Save" HorizontalAlignment="Left" Height="29" Margin="218,282,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label Name="lblsample" Content="0x" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="230,109,0,0" VerticalAlignment="Top" Foreground="#FFE8D4D4" Width="57" FontSize="20"/>
+
+    </Grid>
+</Window>
